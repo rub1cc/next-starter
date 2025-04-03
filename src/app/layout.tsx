@@ -1,4 +1,4 @@
-import { GeistSans } from 'geist/font/sans'
+import { Inter } from 'next/font/google'
 import ThemeProvider from '@/providers/ThemeProvider'
 import NextTopLoader from 'nextjs-toploader'
 import { Analytics } from '@vercel/analytics/react'
@@ -16,6 +16,11 @@ export const metadata = {
   description: 'The fastest way to build apps with Next.js and Supabase',
 }
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -24,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={GeistSans.className}
+      className={inter.className}
       style={{ colorScheme: 'dark' }}
       suppressHydrationWarning
     >
