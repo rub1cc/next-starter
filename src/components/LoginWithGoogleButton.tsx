@@ -15,8 +15,6 @@ export default function LoginWithGoogleButton() {
     if (error) {
       return redirect('/login?message=Could not authenticate user')
     }
-
-    return redirect('/')
   }
 
   return (
