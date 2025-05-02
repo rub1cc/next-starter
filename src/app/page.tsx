@@ -5,7 +5,7 @@ import { createServerClient } from '@/utils/supabase'
 import { cookies } from 'next/headers'
 
 export default async function Index() {
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
 
   const canInitSupabaseClient = () => {
     // This function is just for the interactive tutorial.

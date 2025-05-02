@@ -3,6 +3,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  turbopack: {
+    resolveExtensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
+  },
+}
 
 module.exports = withBundleAnalyzer(nextConfig)
